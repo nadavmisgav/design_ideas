@@ -18,6 +18,9 @@
                 <li>אודות</li>
                 <li>רשימת פוסטים</li>
                 <li>קטגוריות</li>
+                <li>
+                    <div class="theme-selector"><span class="icon" onclick="changeTheme()">X</span></div>
+                </li>
             </ul>
         </nav>
     </header>
@@ -157,5 +160,19 @@
         </div>
     </section>
 </body>
+
+<script>
+    function recChangeTheme(elem) {
+        elem.classList.toggle('dark')
+        Array.from(elem.children).forEach((elem) => {
+            recChangeTheme(elem)
+        })
+    }
+
+    function changeTheme(event) {
+        var body = document.getElementsByTagName('body')[0];
+        recChangeTheme(body)
+    }
+</script>
 
 </html>
