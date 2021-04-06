@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"
+        integrity="sha512-f5HTYZYTDZelxS7LEQYv8ppMHTZ6JJWglzeQmr0CVTS70vJgaJiIO15ALqI7bhsracojbXkezUIL+35UXwwGrQ=="
+        crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
@@ -28,7 +31,7 @@
         <h1>קוגניטיבי</h1>
         <p>לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית קולורס מונפרד אדנדום ילקוף, מרגשי ומרגשח. עמחליף</p>
     </section>
-    <section class="posts">
+    <section class="posts rellax" data-rellax-speed="10">
         <div class="post">
             <h1>עובר ושב</h1>
             <span>קטגוריה / 23.10.2021</span>
@@ -173,6 +176,15 @@
         var body = document.getElementsByTagName('body')[0];
         recChangeTheme(body)
     }
+
+    var rellax = new Rellax('.rellax', {
+        speed: -2,
+        center: false,
+        wrapper: null,
+        round: true,
+        vertical: true,
+        horizontal: false
+    });
 </script>
 
 </html>
